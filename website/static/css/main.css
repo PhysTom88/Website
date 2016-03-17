@@ -1,0 +1,43 @@
+body {
+	font-family: 'Syncopate', sans-serif;
+}
+
+h1 {
+	text-align: right;
+	letter-spacing: 13px;
+	padding: 0px 0px;
+}
+
+h1 a {
+    color: #569afb;
+    text-decoration: none;
+    font-size: 60px;
+}
+
+ul {
+	float: right;
+	width: 75%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #569afb;
+}
+
+li {
+    float: left;
+    width: 20%
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #a1c7fd;
+}
