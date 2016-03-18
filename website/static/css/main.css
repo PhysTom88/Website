@@ -1,35 +1,34 @@
-body {
+.base--page {
 	font-family: 'Syncopate', sans-serif;
 }
 
-h1 {
-	text-align: right;
-	letter-spacing: 13px;
+.header h1 {
+    margin-left: 20px;
+	text-align: center;
+	letter-spacing: 33px;
 	padding: 0px 0px;
 }
 
-h1 a {
-    color: #569afb;
+.header h1 a {
+    color: #ff0000;
     text-decoration: none;
     font-size: 60px;
 }
 
-ul {
-	float: right;
-	width: 75%;
+#headnav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #569afb;
+    background-color: #ff0000;
 }
 
-li {
+#headnav li {
     float: left;
     width: 20%
 }
 
-li a {
+#headnav li a {
     display: block;
     color: white;
     text-align: center;
@@ -38,6 +37,29 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #a1c7fd;
+#headnav li a:hover {
+    background-color: #bd1c1c;
+}
+
+#footnav ul{
+    position: fixed;
+    width: 98.75%;
+    bottom: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+#footnav li {
+    float: left;
+    width: 22%;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+#footnav li a{
+    color: red;
+    text-decoration: none;
 }
