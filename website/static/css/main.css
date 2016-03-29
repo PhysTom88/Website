@@ -41,9 +41,9 @@
     background-color: #bd1c1c;
 }
 
-#footnav ul{
+.footnav ul{
+    width: 98.7%;
     position: fixed;
-    width: 98.75%;
     bottom: 0;
     list-style-type: none;
     margin: 0;
@@ -52,21 +52,39 @@
     background-color: #ffffff;
 }
 
-#footnav li {
+.footnav li {
     float: left;
     width: 22%;
     text-align: center;
     padding: 14px 16px;
 }
 
-#footnav li a{
+.footnav li a{
     color: red;
     text-decoration: none;
 }
 
 #welcome {
+    float: left;
     margin-bottom: 30px;
     margin-left: 20px;
     width: 26%;
     overflow: scroll;
+}
+
+#contents {
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    width: 66%;
+}
+ 
+.boxed {
+    margin-bottom: 10px;
+    border: 1px #ff0000 solid;
+}
+
+.in-box {
+    padding-left: 5px;
+    padding-right: 5px;
 }

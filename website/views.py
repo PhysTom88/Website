@@ -8,16 +8,16 @@ def home(request):
 
 
 def about(request):
-	return render_to_response(template_name='about.html')
+	return render(request, 'about.html')
 
 
 def blog(request):
-	return render_to_response(template_name='blog.html')
+	return render(request, 'blog.html')
 
 
 def photography(request):
-	return render_to_response(template_name='photography.html')
+	return render(request, 'photography.html')
 
 
 def trips(request):
-	return render_to_response(template_name='trips.html')
+	return render(request, 'trips.html')
