@@ -1,2 +1,11 @@
 {% extends "base.html" %}
 {% block title %}{{ block.super }} | HOME {% endblock %}
+{% block content %}
+	<div id="welcome">
+		<h3>{{ message.block_name }}!</h3>
+		<p>{{ message.mod_date }}</p>
+		<p>
+			{{ message.block_text }}
+		</p>
+	</div>
+{% endblock %}

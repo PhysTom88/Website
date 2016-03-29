@@ -1,7 +1,10 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render
+
+from .models import TextDescription
 
 def home(request):
-	return render_to_response(template_name='home.html')
+	message = TextDescription.objects.get(block_name='welcome')
+	return render(request, 'home.html', {'message': message})
 
 
 def about(request):

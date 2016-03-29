@@ -63,3 +63,10 @@
     color: red;
     text-decoration: none;
 }
+
+#welcome {
+    margin-bottom: 30px;
+    margin-left: 20px;
+    width: 26%;
+    overflow: scroll;
+}
