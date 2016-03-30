@@ -13,7 +13,7 @@ def about(request):
 	return render(request, 'about.html')
 
 
-def blog(request):
+def blog(request, title):
 	return render(request, 'blog.html')
 
 

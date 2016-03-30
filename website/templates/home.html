@@ -14,9 +14,11 @@
 	</div>
 	<div class="contents">
 		<section class="boxed">
+		<a href="{% url 'home:blog' title=blog.title %}">
 			<h5 class="in-box">Blog</h5>
 			<img src="{% static blog.post_image %}" alt="blog_image"/>
 			<h6 class="in-box">{{ blog.title }} ({{ blog.published_date }})</h6>
+		</a>
 		</section>
 	</div>
 	<div class="contents">

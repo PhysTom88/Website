@@ -95,6 +95,10 @@
     height: 10%;
 }
 
+.boxed:hover {
+    opacity: 0.4;
+}
+
 .in-box {
     padding-left: 5px;
     padding-right: 5px;
