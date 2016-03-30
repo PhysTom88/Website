@@ -1,10 +1,12 @@
 from django.shortcuts import render
 
-from .models import TextDescription
+from .models import TextDescription, BlogPost
 
 def home(request):
 	message = TextDescription.objects.get(block_name='welcome')
-	return render(request, 'home.html', {'message': message})
+	latest_blog = BlogPost.objects.last()
+	return render(request, 'home.html',
+				  {'message': message, 'blog': latest_blog})
 
 
 def about(request):

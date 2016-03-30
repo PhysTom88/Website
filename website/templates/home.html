@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}{{ block.super }} | HOME {% endblock %}
 {% block content %}
 	<div id="welcome">
@@ -14,9 +15,8 @@
 	<div class="contents">
 		<section class="boxed">
 			<h5 class="in-box">Blog</h5>
-			<p class="in-box">
-				{{ message.block_text }}
-			</p>
+			<img src="{% static blog.post_image %}" alt="blog_image"/>
+			<h6 class="in-box">{{ blog.title }} ({{ blog.published_date }})</h6>
 		</section>
 	</div>
 	<div class="contents">
