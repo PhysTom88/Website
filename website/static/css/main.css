@@ -72,13 +72,19 @@
     overflow: scroll;
 }
 
-#contents {
+#contents-heading {
     float: left;
     margin-left: 30px;
-    margin-bottom: 30px;
-    width: 66%;
+    width: 66%
 }
- 
+
+.contents {
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    width: 33%;
+}
+
 .boxed {
     margin-bottom: 10px;
     border: 1px #ff0000 solid;
