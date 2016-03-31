@@ -79,6 +79,7 @@
 }
 
 .contents {
+    display: block;
     float: left;
     margin-left: 30px;
     margin-bottom: 50px;
@@ -86,6 +87,8 @@
 }
 
 .boxed {
+    color: black;
+    text-decoration: none;
     margin-bottom: 10px;
     border: 1px #ff0000 solid;
 }

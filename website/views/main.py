@@ -1,0 +1,13 @@
+from django.shortcuts import render
+
+from website.models import TextDescription, BlogPost
+
+def home(request):
+	message = TextDescription.objects.get(block_name='welcome')
+	latest_blog = BlogPost.objects.last()
+	return render(request, 'main/home.html',
+				  {'message': message, 'blog': latest_blog})
+
+
+def about(request):
+	return render(request, 'main/about.html')

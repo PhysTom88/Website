@@ -19,5 +19,8 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('website.urls', namespace='home')) # Main site landing page
+    url(r'^', include('website.urls.main', namespace='main')),
+    url(r'^blog/', include('website.urls.blog', namespace='blog')),
+    url(r'^photography/', include('website.urls.photos', namespace='photos')),
+    url(r'^trips/', include('website.urls.trips', namespace='trips'))
 ]
