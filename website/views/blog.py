@@ -10,5 +10,5 @@ class MainView(generic.View):
 
 class BlogPost(generic.View):
 
-	def get(self, request, title):
+	def get(self, request, slug):
 		return render(request, 'blog/blog_post.html')

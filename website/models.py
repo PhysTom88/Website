@@ -21,6 +21,7 @@ class BlogPost(models.Model):
 	created_date = models.DateField(default=timezone.now)
 	published_date = models.DateField(blank=True, null=True)
 	post_image = models.CharField(max_length=250)
+	slug = models.SlugField(max_length=255, default=None, null=True)
 
 	def publish(self):
 		self.published_date = timezone.now()
