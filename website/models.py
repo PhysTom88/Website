@@ -6,7 +6,7 @@ class TextDescription(models.Model):
 	'''Model for large pieces of text'''
 
 	block_name = models.CharField(max_length=250, unique=True)
-	block_text = models.TextField('block of text')
+	block_text = models.TextField('Text')
 	mod_date = models.DateField(blank=True, null=True)
 
 	def __unicode__(self):

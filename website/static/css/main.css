@@ -158,3 +158,10 @@
     text-align: center;
     padding: 21px 0px;
 }
+
+textarea {
+    font-family: 'Syncopate', sans-serif;
+    border: 1px #ff0000 solid;
+    width: 100%;
+    float: right;
+}
