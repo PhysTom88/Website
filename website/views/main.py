@@ -12,4 +12,5 @@ def home(request):
 
 
 def about(request):
-	return render(request, 'main/about.html')
+	bio_text = TextDescription.objects.get(block_name='Biography')
+	return render(request, 'main/about.html', {'message': bio_text})

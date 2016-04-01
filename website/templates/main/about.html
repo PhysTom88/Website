@@ -1,2 +1,13 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}{{ block.super }} | ABOUT {% endblock %}
+{% block content %}
+<div id="bio">
+	<h3>{{ message.block_name }}:</h3>
+	<h5>{{ message.mod_date }}</h5>
+	<p>
+		<img id="tom-face" src={% static "main/images/tom.jpg" %}>
+		{{ message.block_text|linebreaks }}
+	</p>
+</div>
+{% endblock %}
