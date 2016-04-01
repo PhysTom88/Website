@@ -91,11 +91,12 @@
     text-decoration: none;
     margin-bottom: 10px;
     border: 1px #ff0000 solid;
+    height: 360px;
 }
 
 .boxed img {
     width: 100%;
-    height: 10%;
+    height: 65%;
 }
 
 .boxed h6 {
