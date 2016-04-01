@@ -18,7 +18,7 @@ def about(request):
 
 
 def edit(request, message):
-	message = TextDescription.objects.get(block_name='welcome')
+	message = TextDescription.objects.get(block_name=message)
 	if request.method == 'POST':
 		form = TextDescriptionForm(request.POST, instance=message)
 		if form.is_valid():
