@@ -98,6 +98,10 @@
     height: 10%;
 }
 
+.boxed h6 {
+    text-align: center;
+}
+
 .boxed:hover {
     opacity: 0.4;
 }
