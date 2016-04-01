@@ -17,7 +17,7 @@ def about(request):
 	return render(request, 'main/about.html', {'message': bio_text})
 
 
-def edit(request):
+def edit(request, message):
 	message = TextDescription.objects.get(block_name='welcome')
 	if request.method == 'POST':
 		form = TextDescriptionForm(request.POST, instance=message)

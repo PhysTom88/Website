@@ -6,9 +6,9 @@
 		<h3>{{ message.block_name }}!</h3>
 		<h5>{{ message.mod_date }}</h5>
 		<p>
-			{{ message.block_text }}
+			{{ message.block_text|linebreaks }}
 		{% if user.is_authenticated %}
-			<a href="{% url 'main:main-edit' %}">edit</a>
+			<a href="{% url 'main:main-edit' message=message %}">edit</a>
 		{% endif %}
 		</p>
 	</div>
