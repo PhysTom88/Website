@@ -70,6 +70,7 @@
     margin-left: 20px;
     width: 26%;
     overflow: scroll;
+    text-align: justify;
 }
 
 #contents-heading {
@@ -114,7 +115,7 @@
 
 #bio {
     float: left;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     margin-left: 20px;
     width: 47%;
     overflow: scroll;
