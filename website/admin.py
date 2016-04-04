@@ -6,6 +6,7 @@ class DescriptionAdmin(admin.ModelAdmin):
 	fieldsets = [
 	('Title', {'fields': ['block_name']}),
 	('Text', {'fields': ['block_text']}),
+	('URL', {'fields': ['text_location']}),
 	('Date Modified', {'fields': ['mod_date']})
 	]
 	list_display = ('block_name', 'mod_date')

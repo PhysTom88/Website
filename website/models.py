@@ -8,6 +8,7 @@ class TextDescription(models.Model):
 	block_name = models.CharField(max_length=250, unique=True)
 	block_text = models.TextField('Text')
 	mod_date = models.DateField(blank=True, null=True)
+	text_location = models.CharField(max_length=100, blank=True, null=True)
 
 	def __unicode__(self):
 		return self.block_name
