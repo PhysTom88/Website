@@ -42,9 +42,8 @@
 }
 
 .footnav ul{
-    width: 98.7%;
-    position: fixed;
-    bottom: 0;
+    float: left;
+    width: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -54,19 +53,20 @@
 
 .footnav li {
     float: left;
-    width: 22%;
-    text-align: center;
-    padding: 14px 16px;
+    width: 25%;
 }
 
 .footnav li a{
+    display: block;
+    text-align: center;
     color: red;
+    padding: 14px 16px;
     text-decoration: none;
 }
 
 #welcome {
     float: left;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     margin-left: 20px;
     width: 26%;
     overflow: scroll;
@@ -82,7 +82,7 @@
     display: block;
     float: left;
     margin-left: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     width: 33%;
 }
 
