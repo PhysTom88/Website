@@ -2,17 +2,18 @@
 	font-family: 'Syncopate', sans-serif;
 }
 
-.header h1 {
+.heading h1 {
+    display: block;
     margin-left: 20px;
 	text-align: center;
 	letter-spacing: 33px;
 	padding: 0px 0px;
 }
 
-.header h1 a {
+.heading h1 a {
     color: #ff0000;
     text-decoration: none;
-    font-size: 60px;
+    font-size: 4.3vw;
 }
 
 #headnav ul {
@@ -162,6 +163,9 @@
 
 .editable {
     color: black;
+}
+
+.editable {
     text-decoration: none;
 }
 
