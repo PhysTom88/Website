@@ -174,9 +174,20 @@
     color: red;
 }
 
+.edit-button {
+    font-family: 'Syncopate', sans-serif;
+    background-color: red;
+    color: white;
+    width: 25%;
+    height: 4vw;
+    font-size: 3vw;
+    border: none;
+    margin-left: 4.6vw;
+}
+
 textarea {
     font-family: 'Syncopate', sans-serif;
     border: 1px #ff0000 solid;
-    width: 100%;
+    width: 95%;
     float: right;
 }
