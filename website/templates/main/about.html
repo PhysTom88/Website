@@ -3,7 +3,11 @@
 {% block title %}{{ block.super }} | ABOUT {% endblock %}
 {% block content %}
 <div id="bio">
-	<h3>{{ message.block_name }}:</h3>
+	{% if user.is_authenticated %}
+		<a href="{% url 'main:main-edit' message=message %}"class="editable"><h3 class="editable">{{ message.block_name }}!</h3></a>
+	{% else %}
+		<h3>{{ message.block_name }}!</h3>
+	{% endif %}
 	<h5>{{ message.mod_date }}</h5>
 	<p>
 		<img id="tom-face" src={% static "main/images/tom.jpg" %}>

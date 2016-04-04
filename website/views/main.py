@@ -5,7 +5,7 @@ from website.models import TextDescription, BlogPost
 from website.forms import TextDescriptionForm
 
 def home(request):
-	message = TextDescription.objects.get(block_name='welcome')
+	message = TextDescription.objects.get(block_name='Welcome')
 	latest_blog = BlogPost.objects.last()
 	latest_blog.slug = text.slugify(latest_blog.title)
 	return render(request, 'main/home.html',

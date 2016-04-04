@@ -160,6 +160,11 @@
     padding: 21px 0px;
 }
 
+.editable {
+    color: black;
+    text-decoration: none;
+}
+
 textarea {
     font-family: 'Syncopate', sans-serif;
     border: 1px #ff0000 solid;
