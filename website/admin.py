@@ -15,10 +15,9 @@ class DescriptionAdmin(admin.ModelAdmin):
 
 class BlogPostAdmin(admin.ModelAdmin):
 	fieldsets = [
-	(None, {'fields': ['title']}),
-	(None, {'fields': ['text']}),
+	('Title & Text', {'fields': ['title', 'text']}),
 	('Date Information', {'fields': ['created_date', 'published_date']}),
-	(None, {'fields': ['post_image']})
+	('Post Image', {'fields': ['post_image']})
 	]
 	list_display = ('title', 'created_date', 'published_date')
 	list_filter = ['published_date']

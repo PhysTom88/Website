@@ -1,2 +1,13 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}{{ block.super }} | BLOG {% endblock %}
+{% block content %}
+<div class="blog-sidebar">
+	<p class="blog-sidebar-header">Filter:</p>
+	<p class="blog-sidebar-subheader">Topic:</p>
+	<p class="blog-sidebar-subheader">Year:</p>
+</div>
+<div class="blog-main">
+	
+</div>
+{% endblock %}

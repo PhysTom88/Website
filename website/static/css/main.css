@@ -191,3 +191,23 @@ textarea {
     width: 95%;
     float: right;
 }
+
+.blog-sidebar {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    float: left;
+    background-color: white;
+    border: 1px #ff0000 solid;
+    width: 25%;
+    color: red;
+}
+
+.blog-sidebar-header {
+    line-height: 20%;
+    padding-left: 1vw;
+}
+
+.blog-sidebar-subheader {
+    line-height: 10%;
+    padding-left: 2vw; 
+}
