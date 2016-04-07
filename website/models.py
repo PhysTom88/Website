@@ -21,7 +21,9 @@ class BlogPost(models.Model):
 	text = models.TextField('blog text')
 	created_date = models.DateField(default=timezone.now)
 	published_date = models.DateField(blank=True, null=True)
-	post_image = models.CharField(max_length=250)
+	post_image = models.ImageField(upload_to='blog/images/', max_length=100,
+								   blank=True, null=True)
+
 	slug = models.SlugField(max_length=255, default=None, null=True)
 
 	def publish(self):
