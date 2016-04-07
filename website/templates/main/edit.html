@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}{{ block.super }} | EDIT{% endblock %}
+{% block title %}{{ block.super }} | EDIT - {{ title }}{% endblock %}
 {% block content %}
     <h1>{{ title }} - edit</h1>
     <form method="POST" class="edit-form">{% csrf_token %}
