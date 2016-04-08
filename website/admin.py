@@ -15,7 +15,7 @@ class DescriptionAdmin(admin.ModelAdmin):
 
 class BlogPostAdmin(admin.ModelAdmin):
 	fieldsets = [
-	('Title & Text', {'fields': ['title', 'text']}),
+	('Post Information', {'fields': ['title', 'text', 'subject']}),
 	('Date Information', {'fields': ['created_date', 'published_date']}),
 	('Post Image', {'fields': ['post_image']})
 	]

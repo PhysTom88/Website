@@ -4,8 +4,20 @@
 {% block content %}
 <div class="blog-sidebar">
 	<p class="blog-sidebar-header">Filter:</p>
-	<p class="blog-sidebar-subheader">Topic:</p>
-	<p class="blog-sidebar-subheader">Year:</p>
+	<ul>
+		<li class="blog-sidebar-subheader">Topic:</li>
+		<ul>
+			{% for topic in topics %}
+				<li class="blog-sidebar-title">{{ topic }}</li>
+			{% endfor %}
+		</ul>
+		<li class="blog-sidebar-subheader">Year:</li>
+		<ul>
+			{% for year in years %}
+				<li class="blog-sidebar-title">{{ year }}</li>
+			{% endfor %}
+		</ul>
+	</ul>
 </div>
 <div class="blog-main">
 	

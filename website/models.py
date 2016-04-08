@@ -16,9 +16,13 @@ class TextDescription(models.Model):
 
 class BlogPost(models.Model):
 	'''Model for blog posts'''
+	SUBJECT_CHOICE = (
+		('TEST', 'Test'),
+		)
 
 	title = models.CharField(max_length=250, unique=True)
 	text = models.TextField('blog text')
+	subject = models.CharField(max_length=250, choices=SUBJECT_CHOICE, blank=True, null=True)
 	created_date = models.DateField(default=timezone.now)
 	published_date = models.DateField(blank=True, null=True)
 	post_image = models.ImageField(upload_to='blog/images/', max_length=100,

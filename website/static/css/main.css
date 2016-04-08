@@ -202,12 +202,13 @@ textarea {
     color: red;
 }
 
+.blog-sidebar ul {
+    list-style-type: georgian;
+}
+
 .blog-sidebar-header {
-    line-height: 20%;
     padding-left: 1vw;
 }
 
 .blog-sidebar-subheader {
-    line-height: 10%;
-    padding-left: 2vw; 
 }
