@@ -3,7 +3,7 @@
 {% block title %}{{ block.super }} | BLOG {% endblock %}
 {% block content %}
 <div class="blog-sidebar">
-	<p class="blog-sidebar-header">Filter:</p>
+	<p class="blog-sidebar-header">Blog Post Filter:</p>
 	<ul>
 		<li class="blog-sidebar-subheader">Topic:</li>
 		<ul>
@@ -20,6 +20,13 @@
 	</ul>
 </div>
 <div class="blog-main">
-	
+	{% for post in posts %}
+	<a href="{% url 'blog:blog' slug=post.slug year=post.created_date.year %}">
+		<div class="blog-preview">
+			<img src="{% static post.post_image.url %}" alt="blog_image"/>
+			<h6 class="in-box">{{ post.title }} ({{ post.published_date }})</h6>
+		</div>
+	</a>
+	{% endfor %}
 </div>
 {% endblock %}

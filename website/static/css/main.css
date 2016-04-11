@@ -193,22 +193,48 @@ textarea {
 }
 
 .blog-sidebar {
+    font-family: 'Ariel', sans-serif;
     margin-top: 1vw;
     margin-bottom: 1vw;
+    margin-right: 1vw;
     float: left;
     background-color: white;
     border: 1px #ff0000 solid;
-    width: 25%;
+    width: 12.5%;
     color: red;
 }
 
 .blog-sidebar ul {
-    list-style-type: georgian;
+    list-style-type: none;
 }
 
 .blog-sidebar-header {
     padding-left: 1vw;
 }
 
-.blog-sidebar-subheader {
+.blog-main {
+    width: 100%;
+}
+
+.blog-main a {
+    text-decoration: none;
+    color: black;
+}
+
+.blog-main a:hover {
+    opacity: 0.4;
+}
+
+.blog-preview {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-right: 1vw;
+    float: right;
+    border: 1px #ff0000 solid;
+    width: 27.5%;
+    text-align: center;
+}
+
+.blog-preview img {
+    width: 100%;
 }

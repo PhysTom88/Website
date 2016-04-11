@@ -9,7 +9,8 @@ from website.models import BlogPost
 class MainView(generic.View):
 
 	def get(self, request):
-		posts = BlogPost.objects.all().order_by('publised_date')[:6]
+		posts = BlogPost.objects.all().order_by('published_date')[:6]
+		posts = list(posts) * 6
 		topics = map(lambda x: x[1], BlogPost.SUBJECT_CHOICE)
 		years = map(lambda y: y.year,
 				    BlogPost.objects.values_list('published_date')[0])
@@ -19,5 +20,5 @@ class MainView(generic.View):
 
 class BlogPostView(generic.View):
 
-	def get(self, request, slug):
+	def get(self, request, slug, year):
 		return render(request, 'blog/blog_post.html')
