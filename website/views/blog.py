@@ -10,7 +10,6 @@ class MainView(generic.View):
 
 	def get(self, request):
 		posts = BlogPost.objects.all().order_by('published_date')[:6]
-		posts = list(posts) * 6
 		topics = map(lambda x: x[1], BlogPost.SUBJECT_CHOICE)
 		years = map(lambda y: y.year,
 				    BlogPost.objects.values_list('published_date')[0])
