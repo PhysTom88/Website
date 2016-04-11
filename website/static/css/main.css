@@ -1,3 +1,7 @@
+html {
+    height: 100%;
+}
+
 .base--page {
 	font-family: 'Syncopate', sans-serif;
 }
@@ -50,7 +54,8 @@
     float: left;
     width: 100%;
     list-style-type: none;
-    margin: 0;
+    margin-top: 1vw;
+    margin-bottom: 0;
     padding: 0;
     overflow: hidden;
     background-color: #ffffff;
@@ -193,10 +198,8 @@ textarea {
 }
 
 .blog-sidebar {
-    font-family: 'Ariel', sans-serif;
     font-size: 1.3vw;
     margin-top: 1vw;
-    margin-bottom: 1vw;
     margin-right: 1vw;
     float: left;
     background-color: white;
@@ -222,12 +225,16 @@ textarea {
 }
 
 .blog-main {
-    width: 100%;
+    float: left;
+    width: 85%;
 }
 
 .blog-main a {
+    display: inline-block;
+    width: 31.7%;
     text-decoration: none;
     color: black;
+    padding-right: 1vw;
 }
 
 .blog-main a:hover {
@@ -236,11 +243,8 @@ textarea {
 
 .blog-preview {
     margin-top: 1vw;
-    margin-bottom: 1vw;
-    margin-right: 1vw;
-    float: right;
     border: 1px #ff0000 solid;
-    width: 27.5%;
+    width: 100%;
     text-align: center;
 }
 
