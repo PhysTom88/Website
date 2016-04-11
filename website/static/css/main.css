@@ -194,6 +194,7 @@ textarea {
 
 .blog-sidebar {
     font-family: 'Ariel', sans-serif;
+    font-size: 1.3vw;
     margin-top: 1vw;
     margin-bottom: 1vw;
     margin-right: 1vw;
@@ -202,10 +203,18 @@ textarea {
     border: 1px #ff0000 solid;
     width: 12.5%;
     color: red;
+    overflow: hidden;
 }
 
 .blog-sidebar ul {
     list-style-type: none;
+    width: 100%;
+    overflow: hidden;
+}
+
+.blog-sidebar li {
+    width: 100%;
+    overflow: hidden;
 }
 
 .blog-sidebar-header {
