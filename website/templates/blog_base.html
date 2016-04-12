@@ -1,0 +1,17 @@
+<div class="blog-sidebar">
+	<p class="blog-sidebar-header">Blog Post Filter:</p>
+	<ul>
+		<li class="blog-sidebar-subheader">Topic:</li>
+		<ul>
+			{% for topic in topics %}
+				<li class="blog-sidebar-title">{{ topic }}</li>
+			{% endfor %}
+		</ul>
+		<li class="blog-sidebar-subheader">Year:</li>
+		<ul>
+			{% for year in years %}
+				<li class="blog-sidebar-title">{{ year }}</li>
+			{% endfor %}
+		</ul>
+	</ul>
+</div>
