@@ -2,8 +2,8 @@ from django.shortcuts import get_object_or_404, render, redirect
 from django.utils import timezone, text
 from django.views import generic
 
+from website.forms.main import TextDescriptionForm
 from website.models import TextDescription, BlogPost
-from website.forms import TextDescriptionForm
 
 
 class HomeView(generic.View):

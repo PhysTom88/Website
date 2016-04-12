@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views import generic
 
 from website.models import BlogPost
+from website.forms.blog import AddBlogForm, EditBlogForm
 
 
 class MainView(generic.View):
@@ -33,3 +34,13 @@ class BlogPostView(generic.View):
 
 	def get(self, request, slug, year):
 		return render(request, 'blog/blog_post.html')
+
+
+class AddPostView(generic.View):
+
+	def post(self, request):
+		return
+
+	def get(self, request):
+		form = AddBlogForm()
+		return render(request, 'blog/add_post.html', {'form': form})

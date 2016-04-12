@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import TextDescription
+from website.models import TextDescription
 
 class TextDescriptionForm(forms.ModelForm):
 

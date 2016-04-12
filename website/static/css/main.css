@@ -199,12 +199,8 @@ textarea {
 
 .blog-sidebar {
     font-size: 1.3vw;
-    margin-top: 1vw;
-    margin-right: 1vw;
-    float: left;
-    background-color: white;
     border: 1px #ff0000 solid;
-    width: 12.5%;
+    width: 100%;
     color: red;
     overflow: hidden;
 }
@@ -229,6 +225,38 @@ textarea {
     padding-left: 1vw;
 }
 
+.blog-sidebar-wrapper {
+    float: left;
+    width: 12.5%;
+    margin-top: 1vw;
+    margin-right: 1vw;
+}
+
+.blog-add-box {
+    display: inline-block;
+    margin-top: 0.5vw;
+    width: 100%;
+    background-color: red;
+    color: white;
+    border: 1px #ff0000 solid;
+    text-align: center;
+}
+
+.blog-add-box a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.4vw 0;
+}
+
+.blog-add-box a:hover {
+    background-color: #bd1c1c;
+}
+
+.blog-add-box:hover {
+    border-color: #bd1c1c;
+}
+
 .blog-main {
     float: left;
     width: 85%;
@@ -250,9 +278,14 @@ textarea {
 .blog-preview {
     border: 1px #ff0000 solid;
     width: 100%;
+    height: 45vh;
+}
+
+.blog-preview h6 {
     text-align: center;
 }
 
 .blog-preview img {
     width: 100%;
+    height: 74%;
 }
