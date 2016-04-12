@@ -5,23 +5,28 @@ from website.models import BlogPost
 
 
 class MainView(generic.View):
+	TOPICS = map(lambda x: x[1], BlogPost.SUBJECT_CHOICE)
+	YEARS = map(lambda y: y.year,
+				BlogPost.objects.values_list('published_date')[0])
 
 	def get(self, request, identifier=None):
-		topics = map(lambda x: x[1], BlogPost.SUBJECT_CHOICE)
-		years = map(lambda y: y.year,
-				    BlogPost.objects.values_list('published_date')[0])
-
-		if identifier in years:
-			posts = (BlogPost.objects.filter(
-				     published_date=int(identifier)).order_by('-published_date')[:6])
-		elif identifier and identifier.upper() in topics:
-			posts = (BlogPost.objects.filter(
-				     subject=identifier).order_by('-published_date')[:6])
+		if identifier:
+			posts = self.filter_by_identifier(identifier)
 		else:
 			posts = BlogPost.objects.all().order_by('-published_date')[:6]
 
 		return render(request, 'blog/blog_main.html',
-					  {'posts': posts, 'topics': topics, 'years': years})
+					  {'posts': posts, 'topics': self.TOPICS, 'years': self.YEARS})
+
+	def filter_by_identifier(self, identifier):
+		if identifier in self.TOPICS:
+			posts = (BlogPost.objects.filter(
+				     subject=identifier.upper()).order_by('-published_date'))
+		else:
+			posts = (BlogPost.objects.filter(
+				     published_date__year=identifier).order_by('-published_date'))
+
+		return posts
 
 
 class BlogPostView(generic.View):
