@@ -4,13 +4,17 @@
 		<li class="blog-sidebar-subheader">Topic:</li>
 		<ul>
 			{% for topic in topics %}
+				<a href="{% url 'blog:blog-filter' identifier=topic %}"
 				<li class="blog-sidebar-title">{{ topic }}</li>
+				</a>
 			{% endfor %}
 		</ul>
 		<li class="blog-sidebar-subheader">Year:</li>
 		<ul>
 			{% for year in years %}
+				<a href="{% url 'blog:blog-filter' identifier=year %}"
 				<li class="blog-sidebar-title">{{ year }}</li>
+				</a>
 			{% endfor %}
 		</ul>
 	</ul>

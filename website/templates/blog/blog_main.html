@@ -2,7 +2,7 @@
 {% load static %}
 {% block title %}{{ block.super }} | BLOG {% endblock %}
 {% block content %}
-{% include "blog_base.html" %}
+{% include "blog/blog_base.html" %}
 <div class="blog-main">
 	{% for post in posts %}
 		<a href="{% url 'blog:blog' slug=post.slug year=post.created_date.year %}">
