@@ -21,7 +21,7 @@ class BlogPost(models.Model):
 		)
 
 	title = models.CharField(max_length=250, unique=True)
-	text = models.TextField('blog text')
+	text = models.TextField('text')
 	subject = models.CharField(max_length=250, choices=SUBJECT_CHOICE, blank=True, null=True)
 	created_date = models.DateField(default=timezone.now)
 	published_date = models.DateField(blank=True, null=True)

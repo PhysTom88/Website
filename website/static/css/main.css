@@ -187,14 +187,6 @@ html {
     height: 4vw;
     font-size: 1.4vw;
     border: none;
-    margin-left: 4.6vw;
-}
-
-textarea {
-    font-family: 'Syncopate', sans-serif;
-    border: 1px #ff0000 solid;
-    width: 95%;
-    float: right;
 }
 
 .blog-sidebar {
@@ -288,4 +280,57 @@ textarea {
 .blog-preview img {
     width: 100%;
     height: 74%;
+}
+
+.edit-form {
+    float: left;
+    width: 55%;
+    margin: 0% 22.5%;
+    margin-top: 0.5%;
+}
+
+.edit-form textarea, input[type=text]{
+    width: 100%;
+    font-family: "Ariel", sans-serif;
+    border: 1px #ff0000 solid;
+}
+
+.edit-form textarea {
+    height: 32vh;
+}
+
+.edit-form input[type=text] {
+    height: 4vh;
+    font-size: 18px;
+}
+
+.edit-form textarea:focus, input[type=text]:focus {
+    border-width: 3px;
+}
+
+.edit-form select {
+    width: 30%;
+    height: 4vh;
+    display: block;
+    font-family: "Syncopate", sans-serif;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+.edit-form select:focus {
+    border: 1px #ff0000 solid;
+}
+
+.edit-form input[type=file] {
+    width: 90%;
+    height: 5vh;
+    font-size: 18px;
+}
+
+.edit-form .edit-button {
+    width: 15%;
+    height: 6vh;
+    padding: 8px 14px;
 }
