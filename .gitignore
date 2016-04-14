@@ -2,3 +2,4 @@
 *.sqlite3
 *.jpg
 *.pdf
+.DS_Store

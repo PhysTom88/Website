@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.utils import timezone, text
 from django.views import generic
 
 from website.models import BlogPost
@@ -39,7 +40,21 @@ class BlogPostView(generic.View):
 class AddPostView(generic.View):
 
 	def post(self, request):
-		return
+		form = AddBlogForm(request.POST, request.FILES)
+		if form.is_valid():
+			post = form.save(commit=False)
+			post.created_date = timezone.now()
+			post.published_date = timezone.now()
+			post.slug = text.slugify(post.title)
+			post.post_image = request.FILES['post_image']
+			post.save()
+
+			return redirect(
+				'blog:blog', slug=post.slug,
+				year=post.published_date.year)
+		else:
+			form = AddBlogForm(instance=post)
+			return render(request, 'blog/add_post.html', {'form': form})
 
 	def get(self, request):
 		form = AddBlogForm()

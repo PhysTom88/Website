@@ -8,3 +8,5 @@ DATABASES = {
 		'NAME': 'db.sqlite3'
 	}
 }
+
+MEDIA_ROOT = '/Users/Tom/Documents/Play/Projects/Django/media/'

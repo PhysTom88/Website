@@ -18,7 +18,7 @@
 	<div class="contents">
 		<section class="boxed">
 			<h5 class="in-box">Blog</h5>
-			<img src="{% static blog.post_image.url %}" alt="blog_image"/>
+			<img src="{{ MEDIA_URL }}{{ blog.post_image.url }}" alt="blog_image"/>
 			<h6 class="in-box">{{ blog.title }} ({{ blog.published_date }})</h6>
 		</section>
 	</div>

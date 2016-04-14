@@ -2,7 +2,7 @@
 {% block title %}{{ block.super }} | NEW BLOG POST {% endblock %}
 {% block content %}
 	<h1 class="edit-form">Add Blog Post</h1>
-	<form method="POST" class="edit-form">{% csrf_token %}
+	<form method="POST" enctype="multipart/form-data" class="edit-form">{% csrf_token %}
 		{{ form.as_p }}
 		<button type="submit" class="edit-button">Save</button>
 	</form>
