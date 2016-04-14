@@ -30,9 +30,5 @@ class BlogPost(models.Model):
 
 	slug = models.SlugField(max_length=255, default=None, null=True)
 
-	def publish(self):
-		self.published_date = timezone.now()
-		self.save()
-
 	def __unicode__(self):
 		return self.title
