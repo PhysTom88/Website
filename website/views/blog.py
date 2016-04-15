@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 from django.utils import timezone, text
 from django.views import generic
 
@@ -34,7 +34,8 @@ class MainView(generic.View):
 class BlogPostView(generic.View):
 
 	def get(self, request, slug, year):
-		return render(request, 'blog/blog_post.html')
+		post = get_object_or_404(BlogPost, slug=slug)
+		return render(request, 'blog/blog_post.html', {'post': post})
 
 
 class AddPostView(generic.View):
@@ -53,7 +54,6 @@ class AddPostView(generic.View):
 				'blog:blog', slug=post.slug,
 				year=post.published_date.year)
 		else:
-			form = AddBlogForm(instance=post)
 			return render(request, 'blog/add_post.html', {'form': form})
 
 	def get(self, request):

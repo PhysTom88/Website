@@ -20,13 +20,13 @@ class BlogPost(models.Model):
 		('TEST', 'Test'),
 		)
 
-	title = models.CharField(max_length=250, unique=True)
+	title = models.CharField(max_length=250, unique=True, blank=False)
 	text = models.TextField('text')
 	subject = models.CharField(max_length=250, choices=SUBJECT_CHOICE, blank=True, null=True)
 	created_date = models.DateField(default=timezone.now)
-	published_date = models.DateField(blank=True, null=True)
+	published_date = models.DateField(null=True)
 	post_image = models.ImageField(upload_to='blog/images/', max_length=100,
-								   blank=True, null=True)
+								   blank=False, null=True)
 
 	slug = models.SlugField(max_length=255, default=None, null=True)
 
