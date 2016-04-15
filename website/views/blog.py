@@ -7,9 +7,8 @@ from website.forms.blog import AddBlogForm, EditBlogForm
 
 
 class MainView(generic.View):
-	TOPICS = map(lambda x: x[1], BlogPost.SUBJECT_CHOICE)
-	YEARS = map(lambda y: y.year,
-				BlogPost.objects.values_list('published_date')[0])
+	
+	TOPICS, YEARS = BlogPost.get_blog_filter_contents()
 
 	def get(self, request, identifier=None):
 		if identifier:
@@ -34,8 +33,10 @@ class MainView(generic.View):
 class BlogPostView(generic.View):
 
 	def get(self, request, slug, year):
+		topics, years = BlogPost.get_blog_filter_contents()
 		post = get_object_or_404(BlogPost, slug=slug)
-		return render(request, 'blog/blog_post.html', {'post': post})
+		return render(request, 'blog/blog_post.html',
+				      {'post': post, 'topics': topics, 'years': years})
 
 
 class AddPostView(generic.View):

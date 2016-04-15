@@ -334,3 +334,15 @@ html {
     height: 6vh;
     padding: 8px 14px;
 }
+
+.blog-post {
+    float: left;
+    width: 70%;
+    margin: 0% 5%;
+    margin-top: 1vw;
+    text-align: justify;
+}
+
+.blog-post img {
+    width: 100%;
+}
