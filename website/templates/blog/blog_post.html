@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}{{ block.super }} | BLOG {% endblock %}
+{% block title %}{{ block.super }} | {{ post.title }}{% endblock %}
 {% block content %}
 {% include "blog/blog_base.html" %}
 <div class="blog-post">
