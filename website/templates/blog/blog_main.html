@@ -8,7 +8,7 @@
 		<a href="{% url 'blog:blog' slug=post.slug year=post.created_date.year %}">
 		<div class="blog-preview">
 			<img src="{% static post.post_image.url %}" alt="blog_image"/>
-			<h6 class="in-box">{{ post.title }} ({{ post.published_date }})</h6>
+			<h6 class="in-box">{{ post.title }} ({{ post.published_date.date }})</h6>
 		</div>
 		</a>
 	{% endfor %}

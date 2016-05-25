@@ -23,8 +23,8 @@ class BlogPost(models.Model):
 	title = models.CharField(max_length=250, unique=True, blank=False)
 	text = models.TextField('text')
 	subject = models.CharField(max_length=250, choices=SUBJECT_CHOICE, blank=False, null=True)
-	created_date = models.DateField(default=timezone.now)
-	published_date = models.DateField(null=True)
+	created_date = models.DateTimeField(default=timezone.now)
+	published_date = models.DateTimeField(null=True)
 	post_image = models.ImageField(upload_to='blog/images/', max_length=100,
 								   blank=False, null=True)
 

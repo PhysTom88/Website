@@ -44,16 +44,16 @@ class AddPostView(generic.View):
 	def post(self, request):
 		form = AddBlogForm(request.POST, request.FILES)
 		if form.is_valid():
-			post = form.save(commit=False)
-			post.created_date = timezone.now()
-			post.published_date = timezone.now()
-			post.slug = text.slugify(post.title)
-			post.post_image = request.FILES['post_image']
-			post.save()
+			blog_post = form.save(commit=False)
+			blog_post.created_date = timezone.now()
+			blog_post.published_date = timezone.now()
+			blog_post.slug = text.slugify(blog_post.title)
+			blog_post.post_image = request.FILES['post_image']
+			blog_post.save()
 
 			return redirect(
-				'blog:blog', slug=post.slug,
-				year=post.published_date.year)
+				'blog:blog', slug=blog_post.slug,
+				year=blog_post.published_date.year)
 		else:
 			return render(request, 'blog/add_post.html', {'form': form})
 
